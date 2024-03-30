@@ -39,8 +39,8 @@ class Server:
         """
         Paginates datasetand return appropriate page
         """
-        assert isinstance(page, int) and page > 0\
-            and isinstance(page_size, int) and page_size > 0
+        assert type(page) == int and page > 0\
+            and type(page_size) ==  int and page_size > 0
         start, end = index_range(page, page_size)
         dataset = self.dataset()
         return [] if (start >= len(dataset) or end >= len(dataset))\
