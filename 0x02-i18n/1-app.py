@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Instantiate Babel object"""
 
-from flask import Flask, render_template, request 
+from flask import Flask, render_template, request
 from flask_babel import Babel
 
 
@@ -11,11 +11,13 @@ class Config:
     BABEL_DEFAULT_LOCALE = 'en'
     BABEL_DEFAULT_TIMEZONE = 'UTC'
 
+
 app = Flask(__name__)
 babel = Babel(app)
 port = 5000
 
 app.config.from_object(Config)
+
 
 @app.route('/')
 def index():
