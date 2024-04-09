@@ -8,7 +8,6 @@ port = 5000
 
 
 @app.route('/')
-@app.route('/index', strict_slashes=False)
 def index():
     """Render index.html"""
 
